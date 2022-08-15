@@ -3,7 +3,7 @@ import { Contact } from "../../models/contact-us.model";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    throw new Error("Invalid Request");
+    res.status(400).json({ error: "Bad Request" });
   }
 
   const { firstname, lastname, email, content } = req.body;
@@ -14,12 +14,12 @@ export default async function handler(req, res) {
     !email.includes("@") ||
     content == ""
   ) {
-    return res.status(403).json({ error: "Invalid Input" });
+    return res.status(406).json({ error: "Invalid Input" });
   }
 
   db();
   const newContact = new Contact(req.body);
   await newContact.save();
 
-  res.status(200).json({ message: "Message Sent" });
+  res.status(201).json({ message: "Message Sent" });
 }

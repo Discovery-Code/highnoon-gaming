@@ -20,8 +20,6 @@ function capitalize(name) {
 
 ContactSchema.pre("save", async function () {
   const contactInfo = this;
-  console.log(this, "Schema Middleware");
-
   contactInfo.firstname = capitalize(this.firstname);
   contactInfo.lastname = capitalize(this.lastname);
   contactInfo.email = this.email.toLowerCase();
