@@ -1,0 +1,13 @@
+export const red = "rgb(221, 22, 59)";
+export const grey = "rgb(20, 20, 20);";
+export const white = "rgb(255, 255, 255);";
+export const opacRed25 = "rgb(221, 22, 59, .25);";
+export const opacRed60 = "rgb(221, 22, 59, .60);";
+export const opacRed90 = "rgb(221, 22, 59, .90);";
+export const opacGrey40 = "rgb(20, 20, 20, .40);";
+export const opacGrey50 = "rgb(20, 20, 20, .50);";
+export const opacGrey55 = "rgb(20, 20, 20, .55);";
+export const opacGrey75 = "rgb(20, 20, 20, .75);";
+export const opacblack25 = "rgb(0, 0, 0, .25);";
+export const opacblack40 = "rgb(0, 0, 0, .40);";
+export const opacblack50 = "rgb(0, 0, 0, .50);";
